@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+Body ,
+.CV-header ,
+.CV-header-img,
+.CV-content{
+    display: flex;
+}
+Body{
+    justify-content: center;
+    background-color: rgb(112, 112, 112);
+}
+#CurriculumVitae {
+    background: #ffffff;
+    width: 70%;
+    height: auto;
+    margin: 23px auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 11px 1px #000000;
+
+}
+/*======================= start of the header =======================*/
+.CV-header{
+    width: 100%;
+    justify-content: space-between;
+}
+.CV-header-img{
+    width: 20%;
+    justify-content: center;
+}
+.profile-picture{
+    width: 150px;
+    height: 150px;
+}
+.CV-header-content{
+    width:75%;
+    height: auto;
+    background: beige;
+}
+/*======================= start of the content =======================*/
+.CV-content{
+    height: 500px;
+    width: 100%;
+    margin-top: 10px;
+  justify-content: space-between;
+    background: cadetblue;
+
+}
+.CV-content-left{
+    width: 25%;
+    background: #d1a968;
+}
+.CV-content-right{
+    width: 75%;
+    background: #4f8a44;
+}
