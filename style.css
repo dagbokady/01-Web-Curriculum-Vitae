@@ -10,7 +10,8 @@ Body ,
 .CV-header ,
 .CV-header-img,
 .CV-content,
-.CV-content-left{
+.CV-content-left,
+.CV-content-right{
     display: flex;
     height: auto;
 
@@ -23,11 +24,12 @@ Body{
 #CurriculumVitae {
     background: #ffffff;
     width: 70%;
-    height:100%;
+    height: max-content;
     margin: 23px auto;
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0 3px 11px 1px #000000;
+
 
 }
 h3{
@@ -57,14 +59,16 @@ p{
 }
 /*======================= start of the content =======================*/
 .CV-content{
-    height: 500px;
+    height: max-content;
     width: 100%;
     margin-top: 10px;
   justify-content: space-between;
 
+
 }
 .CV-content-left{
     width: 25%;
+    height: 500px;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -87,6 +91,9 @@ p{
 }
 .CV-content-right{
     width: 75%;
+    height: max-content;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .experience-list{
