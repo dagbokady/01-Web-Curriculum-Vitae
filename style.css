@@ -12,19 +12,22 @@ Body ,
 .CV-content,
 .CV-content-left{
     display: flex;
+    height: auto;
+
 }
 Body{
     justify-content: center;
     background-color: rgb(112, 112, 112);
+    height: 100vh;
 }
 #CurriculumVitae {
     background: #ffffff;
     width: 70%;
-    height: auto;
+    height: 100%;
     margin: 23px auto;
     padding: 20px 30px;
     border-radius: 10px;
-    box-shadow: 0px 3px 11px 1px #000000;
+    box-shadow: 0 3px 11px 1px #000000;
 
 }
 h3{
@@ -84,4 +87,8 @@ p{
 }
 .CV-content-right{
     width: 75%;
+}
+
+.experience-list{
+    margin: 7px 0 7px 30px;
 }
