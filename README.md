@@ -114,4 +114,4 @@ Pour toute question ou retour sur ce projet :
 
 ---
 
-*Dernière mise à jour : [Date]*
+Dernière mise à jour : 04-01-2025 
