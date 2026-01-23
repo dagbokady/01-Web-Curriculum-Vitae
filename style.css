@@ -1,101 +1,284 @@
-*{
-    box-sizing: border-box;
+
+* {
     margin: 0;
-    padding:0;
-    list-style: none;
-    text-decoration: none;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
-Body ,
-.CV-header ,
-.CV-header-img,
-.CV-content,
-.CV-content-left,
-.CV-content-right{
-    display: flex;
-    height: auto;
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+    padding: 20px;
 }
-Body{
-    justify-content: center;
-    background-color: rgb(112, 112, 112);
-    height: 150vh;
-}
+
+
 #CurriculumVitae {
-    background: #ffffff;
-    width: 70%;
-    height: max-content;
-    margin: 23px auto;
-    padding: 20px 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 3px 11px 1px #000000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
 
-
-}
-h3{
-    color: #1d3f53;
-}
-p{
-    text-align: justify;
-    line-height: 1.5;
-}
-/*======================= start of the header =======================*/
-.CV-header{
-    width: 100%;
-    justify-content: space-between;
-}
-.CV-header-img{
-    width: 20%;
-    justify-content: center;
-}
-.profile-picture{
-    width: 150px;
-    height: 150px;
-}
-.CV-header-content{
-    width:75%;
-    gap: 3px;
-    height: auto;
-}
-/*======================= start of the content =======================*/
-.CV-content{
-    height: max-content;
-    width: 100%;
-    margin-top: 10px;
-  justify-content: space-between;
-
-
-}
-.CV-content-left{
-    width: 25%;
-    height: 500px;
+/* Header section */
+.CV-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 30px;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
-.mail:before{
-    content: "📬";
-    vertical-align: middle;
-}
-.nationality:before{
-    content: "🇨🇮";
-    vertical-align: middle;
-}
-.tel:before{
-    content: "📞";
-    vertical-align: middle;
-}
-.location:before{
-    content: "📍";
-    vertical-align: middle;
-}
-.CV-content-right{
-    width: 75%;
-    height: max-content;
-    flex-direction: column;
-    justify-content: space-evenly;
+.CV-header-img {
+    margin-bottom: 20px;
 }
 
-.experience-list{
-    margin: 7px 0 7px 30px;
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.CV-header-content {
+    max-width: 800px;
+}
+
+.CV-name {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.CV-job-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: #ecf0f1;
+}
+
+.CV-header hr {
+    border: none;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 15px 0;
+    width: 100%;
+}
+
+.CV-introduction {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 20px 0;
+    text-align: center;
+    color: #ecf0f1;
+}
+
+
+.CV-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+]
+.CV-content-left {
+    flex: 1;
+    min-width: 300px;
+    background: #f8f9fa;
+    padding: 30px;
+    border-right: 1px solid #eaeaea;
+}
+
+
+.CV-content-right {
+    flex: 2;
+    min-width: 400px;
+    padding: 30px;
+}
+
+
+.personal-info, .skills, .languages, .hobbies,
+.experience, .education, .certification {
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #3498db;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Lists styling */
+.personal-info-list,
+.skills-list,
+.languages-list,
+.hobbies-list,
+.experience-list {
+    list-style: none;
+}
+
+.personal-info-list li,
+.skills-list li,
+.languages-list li,
+.hobbies-list li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.personal-info-list li:before,
+.skills-list li:before,
+.languages-list li:before,
+.hobbies-list li:before {
+    content: "•";
+    color: #3498db;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #1c5a7d;
+    text-decoration: underline;
+}
+
+.personal-info-list a {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Experience, Education, Certification items */
+.experience-list li,
+.education-item,
+.certification-title + p {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.experience-list li:last-child,
+.education-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.experience-post-title,
+.education-item-title,
+.certification-title {
+    color: #3498db;
+}
+
+/* Experience description */
+.experience-description,
+.education-item-description,
+.certification-description {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.experience-description {
+    white-space: pre-line;
+}
+
+
+@media (max-width: 768px) {
+    .CV-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .CV-header-img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .CV-content {
+        flex-direction: column;
+    }
+    
+    .CV-content-left {
+        border-right: none;
+        border-bottom: 1px solid #eaeaea;
+    }
+    
+    .CV-name {
+        font-size: 2rem;
+    }
+    
+    .CV-job-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .CV-header,
+    .CV-content-left,
+    .CV-content-right {
+        padding: 20px;
+    }
+    
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .CV-name {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    #CurriculumVitae {
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    a {
+        color: #2c3e50;
+        text-decoration: none;
+    }
+    
+    .CV-header {
+        background: #2c3e50 !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
 }
