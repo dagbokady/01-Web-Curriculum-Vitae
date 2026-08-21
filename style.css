@@ -1,283 +1,91 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f7fa;
-    padding: 20px;
-}
+ :root{
+    --primary:#0075de;
+    --secondary:#213183;
+    --canvas-soft:#f6f5f4;
+    --surface:#ffffff;
+    --ink:#000000;
+    --ink-secondary:#31302e;
+    --ink-muted:#615d59;
+    --ink-faint:#a39e98;
+    --hairline:#e6e6e6;
+    --r-sm:5px; --r-md:8px; --r-lg:12px; --r-full:9999px;
+    --s-xxs:4px; --s-xs:8px; --s-sm:12px; --s-md:16px; --s-lg:24px; --s-xl:28px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{
+    font-family:"Inter",-apple-system,system-ui,sans-serif;
+    background:var(--canvas-soft);
+    color:var(--ink-secondary);
+    font-size:9.3pt; font-weight:400; line-height:1.5;
+    letter-spacing:0;
+    padding:24px;
+  }
+  .page{
+    width:210mm; min-height:297mm; margin:0 auto;
+    background:var(--canvas-soft);
+    padding:13mm 14mm;
+    display:flex; flex-direction:column; gap:var(--s-sm);
+  }
 
+  /* Hero, the single dark night moment */
+  .hero{
+    background:var(--secondary); color:#fff;
+    border-radius:var(--r-lg);
+    padding:var(--s-lg);
+    display:flex; justify-content:space-between; align-items:flex-end; gap:20px;
+  }
+  h1{font-size:27pt; font-weight:700; line-height:1.05; letter-spacing:-1px; color:#fff}
+  .role{font-size:10.5pt; font-weight:600; letter-spacing:-.125px; margin-top:6px; color:#fff}
+  .pill{
+    display:inline-block; background:var(--surface); color:var(--primary);
+    font-size:8pt; font-weight:600; letter-spacing:.125px;
+    border-radius:var(--r-full); padding:4px 10px; margin-top:10px;
+  }
+  .contact{text-align:right; font-size:8.4pt; line-height:1.6; color:#dfe3f5; white-space:nowrap}
+  .contact a{color:#fff; text-decoration:none}
 
-#CurriculumVitae {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
+  /* Cards */
+  .card{
+    background:var(--surface); border:1px solid var(--hairline);
+    border-radius:var(--r-lg); padding:var(--s-lg);
+  }
+  .eyebrow{
+    font-size:8pt; font-weight:600; letter-spacing:.9px; text-transform:uppercase;
+    color:var(--primary); margin-bottom:var(--s-sm);
+  }
+  .entry + .entry{margin-top:var(--s-sm); padding-top:var(--s-sm); border-top:1px solid var(--hairline)}
+  .line{display:flex; justify-content:space-between; align-items:baseline; gap:14px}
+  .title{font-size:10pt; font-weight:600; letter-spacing:-.125px; color:var(--ink)}
+  .tag{
+    font-size:7.8pt; font-weight:500; color:var(--ink-muted);
+    background:var(--canvas-soft); border-radius:var(--r-sm);
+    padding:2px 8px; white-space:nowrap;
+  }
+  .ctx{font-size:8.7pt; color:var(--ink-muted); margin:3px 0 5px}
+  ul{list-style:none}
+  li{position:relative; padding-left:13px; margin-bottom:3px; font-size:9.3pt}
+  li::before{
+    content:""; position:absolute; left:0; top:.55em;
+    width:4px; height:4px; border-radius:var(--r-full); background:var(--primary);
+  }
+  strong{font-weight:600; color:var(--ink)}
+  p{font-size:9.3pt}
 
-/* Header section */
-.CV-header {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    color: white;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+  .skills{display:grid; grid-template-columns:112px 1fr; gap:5px 16px; align-items:baseline}
+  .k{font-size:8.2pt; font-weight:600; letter-spacing:.6px; text-transform:uppercase; color:var(--ink-muted)}
 
-.CV-header-img {
-    margin-bottom: 20px;
-}
+  .cols{display:grid; grid-template-columns:1fr 1fr; gap:var(--s-sm)}
+  .cols .card{padding:var(--s-md) var(--s-lg)}
+  .sub{font-size:8.6pt; color:var(--ink-muted)}
+  .row{display:flex; justify-content:space-between; gap:10px; align-items:baseline}
+  .stack{margin-bottom:7px}
+  .stack:last-child{margin-bottom:0}
 
-.profile-picture {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.CV-header-content {
-    max-width: 800px;
-}
-
-.CV-name {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.CV-job-title {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 400;
-    color: #ecf0f1;
-}
-
-.CV-header hr {
-    border: none;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.3);
-    margin: 15px 0;
-    width: 100%;
-}
-
-.CV-introduction {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin: 20px 0;
-    text-align: center;
-    color: #ecf0f1;
-}
-
-
-.CV-content {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-}
-
-.CV-content-left {
-    flex: 1;
-    min-width: 300px;
-    background: #f8f9fa;
-    padding: 30px;
-    border-right: 1px solid #eaeaea;
-}
-
-
-.CV-content-right {
-    flex: 2;
-    min-width: 400px;
-    padding: 30px;
-}
-
-
-.personal-info, .skills, .languages, .hobbies,
-.experience, .education, .certification {
-    margin-bottom: 30px;
-}
-
-h3 {
-    color: #2c3e50;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 3px solid #3498db;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Lists styling */
-.personal-info-list,
-.skills-list,
-.languages-list,
-.hobbies-list,
-.experience-list {
-    list-style: none;
-}
-
-.personal-info-list li,
-.skills-list li,
-.languages-list li,
-.hobbies-list li {
-    margin-bottom: 12px;
-    padding-left: 25px;
-    position: relative;
-}
-
-.personal-info-list li:before,
-.skills-list li:before,
-.languages-list li:before,
-.hobbies-list li:before {
-    content: "•";
-    color: #3498db;
-    font-size: 1.5rem;
-    position: absolute;
-    left: 0;
-    top: -5px;
-}
-
-a {
-    color: #2980b9;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #1c5a7d;
-    text-decoration: underline;
-}
-
-.personal-info-list a {
-    color: #2c3e50;
-    font-weight: 500;
-}
-
-/* Experience, Education, Certification items */
-.experience-list li,
-.education-item,
-.certification-title + p {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
-}
-
-.experience-list li:last-child,
-.education-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-h4 {
-    color: #2c3e50;
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.experience-post-title,
-.education-item-title,
-.certification-title {
-    color: #3498db;
-}
-
-/* Experience description */
-.experience-description,
-.education-item-description,
-.certification-description {
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 10px;
-}
-
-.experience-description {
-    white-space: pre-line;
-}
-
-
-@media (max-width: 768px) {
-    .CV-header {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .CV-header-img {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    
-    .CV-content {
-        flex-direction: column;
-    }
-    
-    .CV-content-left {
-        border-right: none;
-        border-bottom: 1px solid #eaeaea;
-    }
-    
-    .CV-name {
-        font-size: 2rem;
-    }
-    
-    .CV-job-title {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    
-    .CV-header,
-    .CV-content-left,
-    .CV-content-right {
-        padding: 20px;
-    }
-    
-    .profile-picture {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .CV-name {
-        font-size: 1.8rem;
-    }
-}
-
-
-@media print {
-    body {
-        background: white;
-        padding: 0;
-    }
-    
-    #CurriculumVitae {
-        box-shadow: none;
-        border-radius: 0;
-    }
-    
-    a {
-        color: #2c3e50;
-        text-decoration: none;
-    }
-    
-    .CV-header {
-        background: #2c3e50 !important;
-        -webkit-print-color-adjust: exact;
-        color-adjust: exact;
-    }
-}
+  @media print{
+    body{padding:0; background:var(--canvas-soft); -webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .page{width:auto; min-height:0; padding:9mm 10mm; gap:9px}
+    .card{padding:14px 18px}
+    @page{size:A4; margin:0}
+  }
