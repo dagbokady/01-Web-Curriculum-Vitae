@@ -1,120 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <title>Curriculum Vitae</title>
+<meta charset="utf-8">
+<title>Christ-Phanuel Dagbo, Software Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-        <div id="CurriculumVitae">
-            <div class="CV-header">
-               <div class="CV-header-img"> <img src="files/profile-pic.png" alt="profile picture" class="profile-picture"></div>
-                <div class="CV-header-content">
-                    <h1 class="CV-name">DAGBO Kady Christ-Phanuel</h1>
-                    <h2 class="CV-job-title">Full Stack Developer</h2>
-                    <hr>
-                    <p class="CV-introduction"> Je suis étudiant en Master 1 en Ingénieurie logiciel à l'ESATIC, spécialisé dans le développement mobile et web.
-                     Mon objectif est de créer des solutions fonctionnelles et intuitives adaptées aux besoins des utilisateurs. Je suis motivé à intégrer une équipe dynamique pour mettre à profit ma créativité et mon savoir-faire</p> <hr>
-                </div>
-            </div>
-            <div class="CV-content">
-                <div class="CV-content-left">
-                    <div class="personal-info">
-                        <ul class="personal-info-list">
-                            <li class="nationality"> Ivoirien</li>
-                            <li class="mail"> <a href="mailto:dagbokady@gnail.com"> dagbokady@gmail.com</a> </li>
-                            <li class="tel"> <a href="tel:+2250779031454">+225 0779031454</a> </li>
-                            <li class="location"> Abidjan </li>
-                            <li> <a href="#"> K. Christ-Phanuel DAGBO </a></li> <!-- Linkedin link-->
-                            <li> <a href="https://github.com/dagbokady"> DagboKady </a> </li>
-                        </ul>
-                    </div>
-                    <div class="skills">
-                        <h3 class="skills-title">Atouts</h3>
-                        <ul class="skills-list">
-                            <li>Autonomie</li>
-                            <li>Rigueur</li>
-                            <li>Travail d'équipe</li>
-                        </ul>
-                    </div>
-                    <div class="languages">
-                        <h3 class="languages-title">Languages</h3>
-                        <ul class="languages-list">
-                            <li>English : B1</li>
-                            <li>French : Natif</li>
-                        </ul>
-                    </div>
-                    <div class="hobbies">
-                        <h3 class="hobbies-title">Centres d'intérêt</h3>
-                        <ul class="hobbies-list">
-                            <li>Programmation</li>
-                            <li>Baketball</li>
-                            <li>Guitare</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="CV-content-right">
-                    <div class="experience">
-                        <h3 class="experience-title">Experience</h3>
-                        <ul class="experience-list">
-                            <li>
-                            <h4 class="experience-post-title">Stagiaire Moa</h4>
-                            <p class="experience-description">
-                                Stage de 3 mois chez SUNU DIGITECH, avec pour mission principale la conception et le déploiement d'une plateforme web centralisée visant à numériser la gestion des commandes et des stocks d'articles de communication pour le groupe SUNU.
+<div class="page">
 
-                                Missions et réalisations
+  <div class="hero">
+    <div>
+      <h1>Christ-Phanuel Dagbo</h1>
+      <div class="role">Software Engineer, Full-Stack &amp; Conception Produit</div>
+      <span class="pill">Master 2 Génie Logiciel, ESATIC</span>
+    </div>
+    <div class="contact">
+      01 70 15 82 51<br>
+      dagbokady@gmail.com<br>
+      Abidjan, Côte d'Ivoire<br>
+      <a href="https://github.com/dagbokady">github.com/dagbokady</a><br>
+      <a href="https://linkedin.com/in/christ-phanuel-dagbo">linkedin.com/in/christ-phanuel-dagbo</a>
+    </div>
+  </div>
 
-                                🔹 Analyse des besoins <br>
-                                🔹 Conception UML : modélisation des cas d'utilisation, diagrammes de classes <br>
-                                🔹 Développement Full-Stack : <br>
-                                Frontend : interface intuitive avec React JS et Tailwind CSS <br>
-                                Backend : API REST sécurisée avec Spring Boot (Java) et base de données PostgreSQL. <br>
-                                Conteneurisation : déploiement via Docker
+  <div class="card">
+    <div class="eyebrow">Profil</div>
+    <p>Étudiant en Master 2 Génie Logiciel, je conçois et développe des applications de bout en bout : analyse du besoin, modélisation UML, API REST, base de données, interface et déploiement conteneurisé. Expérience professionnelle acquise chez SUNU DIGITECH sur une plateforme interne de gestion des commandes et des stocks, en Java/Spring Boot et React. En parallèle, je construis mes propres produits, dont EsaticShare, plateforme de ressources académiques aujourd'hui fonctionnelle, pour travailler l'architecture, la gestion des rôles et la sécurité sur des cas réels.</p>
+  </div>
 
-                                Compétences mobilisées
+  <div class="card">
+    <div class="eyebrow">Expérience professionnelle</div>
+    <div class="entry">
+      <div class="line">
+        <span class="title">Stagiaire MOA &amp; Développeur Full-Stack, SUNU GROUP / SUNU DIGITECH</span>
+        <span class="tag">04/2025 au 06/2025</span>
+      </div>
+      <div class="ctx">La gestion des commandes et des stocks d'articles de communication du groupe reposait sur des échanges manuels, sans outil centralisé ni traçabilité.</div>
+      <ul>
+        <li>Analysé le besoin avec les équipes métier (DCOMM) et traduit les processus existants en <strong>cas d'utilisation et diagrammes de classes UML</strong>, base de conception validée avant tout développement.</li>
+        <li>Développé le backend de la plateforme : <strong>API REST sécurisée en Spring Boot (Java)</strong> adossée à une base <strong>PostgreSQL</strong>, avec authentification et contrôle d'accès par profil.</li>
+        <li>Implémenté les interfaces de saisie et de suivi en <strong>React JS et Tailwind CSS</strong>, à partir des parcours métier identifiés en phase d'analyse.</li>
+        <li>Conteneurisé l'application avec <strong>Docker</strong> pour rendre le déploiement reproductible entre les environnements.</li>
+        <li>Livré en 3 mois une plateforme web centralisée remplaçant le suivi manuel, dans un cadre Agile et Unified Process.</li>
+      </ul>
+    </div>
+  </div>
 
-                                ✅ Méthodologies Agile & Unified Process <br>
-                                ✅ Compétences relationnelles : collaboration avec les équipes métier (DCOMM)
-                            </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="education">
-                        <h3 class="education-title">Education</h3>
-                        <ul class="experience-list">
-                            <li class="education-item">
-                                <h4 class="education-item-title">Licence en Systèmes Informatiques et Génie Logiciel (SIGL)</h4>
-                                <p class="education-item-description">ESATIC ( Ecole Supérieure Africaine des TIC ) <br>
-                                    Treichville</p>
-                            </li>
-                            <li class="education-item">
-                                <h4 class="education-item-title">Baccalauréat C</h4>
-                                <p class="education-item-description">
-                                    Lycée d'Excellence Alassane Ouattara <br>
-                                    Grand-Bassam</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="certification">
-                        <h3 class="experience-title">Certification</h3>
-                        <ul class="experience-list">
-                            <li>
-                                <h4 class="certification-title">React Native</h4>
-                                <p class="certification-description">Certification en React Native sur la plateforme UDEMY.</p>
-                                <a href="https://www.udemy.com/certificate/UC-a7fc0d81-e068-4c44-bc6d-cf562916ee62/">lien vers le diplôme - cliquez ici</a>
-                            </li>
-                            <li>
-                                <h4 class="certification-title">English - Efset</h4>
-                                <p class="certification-description">Certificat EF SET Anglais 48/100 Intermédiaire (B1)</p>
-                                <a href="https://cert.efset.org/fr/QjvCKh">Lien vers le diplôme - cliquez ici</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="dev-skills">
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="card">
+    <div class="eyebrow">Projets sélectionnés</div>
+
+    <div class="entry">
+      <div class="line">
+        <span class="title">EsaticShare, plateforme de ressources académiques</span>
+        <span class="tag">Fonctionnel, lancement à la rentrée</span>
+      </div>
+      <div class="ctx">Produit personnel : conception, architecture et développement intégral.</div>
+      <ul>
+        <li>Conçu un produit permettant aux étudiants de partager et retrouver leurs ressources : documents, classes, ECUE et devoirs, profils, opportunités et fonctionnalités communautaires.</li>
+        <li>Modélisé le domaine autour des classes et des ECUE, avec un <strong>système de rôles et d'administration</strong> déterminant les droits de dépôt, de modération et d'accès aux contenus.</li>
+        <li>Traité les enjeux de <strong>sécurité applicative</strong> (authentification, contrôle d'accès aux documents) et d'expérience utilisateur sur des parcours multiples.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="line">
+        <span class="title">GL-Prime, initiative collective de création de produits numériques</span>
+        <span class="tag">Vision et direction produit</span>
+      </div>
+      <ul>
+        <li>Participé à la vision, à la coordination et à la direction produit d'une organisation structurée en pôles : backend, frontend, UI/UX, cybersécurité, infrastructure, qualité, communication et administration.</li>
+        <li>Produit en cours : un <strong>SaaS d'évaluation pratique en programmation et algorithmique</strong>, destiné à tester des compétences réelles plutôt que théoriques.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="line">
+        <span class="title">KADY, application de rencontre orientée relations sérieuses</span>
+        <span class="tag">En conception et développement</span>
+      </div>
+      <ul>
+        <li>Conçu un modèle d'interaction fondé sur des <strong>Cercles thématiques</strong> : les échanges naissent dans un espace de groupe avant l'ouverture progressive des messages privés, pour réduire le contact non désiré.</li>
+        <li>Travail en cours sur le modèle de données, les niveaux de confiance entre membres et les règles de modération. Lancement visé en juillet 2027.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="line">
+        <span class="title">100 Applications en 1 an, programme d'apprentissage par la pratique</span>
+        <span class="tag">github.com/dagbokady</span>
+      </div>
+      <ul>
+        <li>Développé des applications web et mobile de A à Z, à difficulté croissante et sans assistance d'IA, afin de construire une compréhension de première main de l'architecture logicielle.</li>
+        <li>Approfondi la conception d'<strong>API sécurisées</strong>, l'optimisation serveur et l'usage des tokens, des ORM et d'un WAF.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow">Compétences techniques</div>
+    <div class="skills">
+      <div class="k">Langages</div><div>Java, JavaScript, Python, C, C++, Scala, SQL</div>
+      <div class="k">Frontend</div><div>React, Tailwind CSS, HTML/CSS</div>
+      <div class="k">Backend</div><div>Spring Boot, FastAPI, API REST</div>
+      <div class="k">Données</div><div>PostgreSQL, SQL, ORM</div>
+      <div class="k">DevOps</div><div>Docker, Git, CI/CD</div>
+      <div class="k">Conception</div><div>UML, architecture logicielle, Agile et Unified Process</div>
+      <div class="k">Fondamentaux</div><div>Bases de données et architecture logicielle appliquées en projet. Systèmes d'exploitation, réseaux et architecture des ordinateurs en cours d'approfondissement.</div>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div class="card">
+      <div class="eyebrow">Formation</div>
+      <div class="stack">
+        <div class="row"><span class="title">Master 2 Génie Logiciel</span><span class="tag">En cours</span></div>
+        <div class="sub">ESATIC, Abidjan</div>
+      </div>
+      <div class="stack">
+        <div class="row"><span class="title">Licence Système Informatique et Génie Logiciel</span><span class="tag">2022 à 2025</span></div>
+        <div class="sub">ESATIC, Abidjan</div>
+      </div>
+      <div class="stack">
+        <div class="row"><span class="title">Baccalauréat série C</span><span class="tag">2022</span></div>
+        <div class="sub">Lycée d'excellence Alassane Ouattara</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="eyebrow">Langues</div>
+      <div class="stack sub" style="color:var(--ink-secondary)">
+        Français, langue maternelle<br>
+        Anglais, niveau intermédiaire<br>
+        Japonais, niveau débutant
+      </div>
+      <div class="eyebrow" style="margin-top:var(--s-md)">Centres d'intérêt</div>
+      <div class="sub" style="color:var(--ink-secondary)">Systèmes et ingénierie logicielle, éducation technologique, guitare, création audiovisuelle et 3D</div>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
