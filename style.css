@@ -1,91 +1,201 @@
+:root{
+    --navy:#14213d;
+    --blue:#075fc4;
+    --ink:#172033;
+    --muted:#566274;
+    --line:#dfe4ea;
+    --soft:#f5f7fa;
+}
 
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef1f5;
+    color:var(--ink);
+    font-size:10pt;
+    line-height:1.42;
+}
 
- :root{
-    --primary:#0075de;
-    --secondary:#213183;
-    --canvas-soft:#f6f5f4;
-    --surface:#ffffff;
-    --ink:#000000;
-    --ink-secondary:#31302e;
-    --ink-muted:#615d59;
-    --ink-faint:#a39e98;
-    --hairline:#e6e6e6;
-    --r-sm:5px; --r-md:8px; --r-lg:12px; --r-full:9999px;
-    --s-xxs:4px; --s-xs:8px; --s-sm:12px; --s-md:16px; --s-lg:24px; --s-xl:28px;
-  }
-  *{box-sizing:border-box; margin:0; padding:0}
-  body{
-    font-family:"Inter",-apple-system,system-ui,sans-serif;
-    background:var(--canvas-soft);
-    color:var(--ink-secondary);
-    font-size:9.3pt; font-weight:400; line-height:1.5;
-    letter-spacing:0;
-    padding:24px;
-  }
-  .page{
-    width:210mm; min-height:297mm; margin:0 auto;
-    background:var(--canvas-soft);
+.page{
+    width:210mm;
+    min-height:297mm;
+    margin:20px auto;
     padding:13mm 14mm;
-    display:flex; flex-direction:column; gap:var(--s-sm);
-  }
+    background:#fff;
+}
 
-  /* Hero, the single dark night moment */
-  .hero{
-    background:var(--secondary); color:#fff;
-    border-radius:var(--r-lg);
-    padding:var(--s-lg);
-    display:flex; justify-content:space-between; align-items:flex-end; gap:20px;
-  }
-  h1{font-size:27pt; font-weight:700; line-height:1.05; letter-spacing:-1px; color:#fff}
-  .role{font-size:10.5pt; font-weight:600; letter-spacing:-.125px; margin-top:6px; color:#fff}
-  .pill{
-    display:inline-block; background:var(--surface); color:var(--primary);
-    font-size:8pt; font-weight:600; letter-spacing:.125px;
-    border-radius:var(--r-full); padding:4px 10px; margin-top:10px;
-  }
-  .contact{text-align:right; font-size:8.4pt; line-height:1.6; color:#dfe3f5; white-space:nowrap}
-  .contact a{color:#fff; text-decoration:none}
+header{
+    border-bottom:3px solid var(--navy);
+    padding-bottom:15px;
+    margin-bottom:15px;
+}
 
-  /* Cards */
-  .card{
-    background:var(--surface); border:1px solid var(--hairline);
-    border-radius:var(--r-lg); padding:var(--s-lg);
-  }
-  .eyebrow{
-    font-size:8pt; font-weight:600; letter-spacing:.9px; text-transform:uppercase;
-    color:var(--primary); margin-bottom:var(--s-sm);
-  }
-  .entry + .entry{margin-top:var(--s-sm); padding-top:var(--s-sm); border-top:1px solid var(--hairline)}
-  .line{display:flex; justify-content:space-between; align-items:baseline; gap:14px}
-  .title{font-size:10pt; font-weight:600; letter-spacing:-.125px; color:var(--ink)}
-  .tag{
-    font-size:7.8pt; font-weight:500; color:var(--ink-muted);
-    background:var(--canvas-soft); border-radius:var(--r-sm);
-    padding:2px 8px; white-space:nowrap;
-  }
-  .ctx{font-size:8.7pt; color:var(--ink-muted); margin:3px 0 5px}
-  ul{list-style:none}
-  li{position:relative; padding-left:13px; margin-bottom:3px; font-size:9.3pt}
-  li::before{
-    content:""; position:absolute; left:0; top:.55em;
-    width:4px; height:4px; border-radius:var(--r-full); background:var(--primary);
-  }
-  strong{font-weight:600; color:var(--ink)}
-  p{font-size:9.3pt}
+h1{
+    margin:0;
+    color:var(--navy);
+    font-size:25pt;
+    line-height:1.05;
+    letter-spacing:-.7px;
+}
 
-  .skills{display:grid; grid-template-columns:112px 1fr; gap:5px 16px; align-items:baseline}
-  .k{font-size:8.2pt; font-weight:600; letter-spacing:.6px; text-transform:uppercase; color:var(--ink-muted)}
+.headline{
+    margin-top:5px;
+    color:var(--blue);
+    font-size:11pt;
+    font-weight:700;
+}
 
-  .cols{display:grid; grid-template-columns:1fr 1fr; gap:var(--s-sm)}
-  .cols .card{padding:var(--s-md) var(--s-lg)}
-  .sub{font-size:8.6pt; color:var(--ink-muted)}
-  .row{display:flex; justify-content:space-between; gap:10px; align-items:baseline}
-  .stack{margin-bottom:7px}
-  .stack:last-child{margin-bottom:0}
+.contact{
+    margin-top:9px;
+    color:#3f4b5c;
+    font-size:8.7pt;
+    line-height:1.55;
+}
 
-  @media print{
-    body{padding:0; background:var(--canvas-soft); -webkit-print-color-adjust:exact; print-color-adjust:exact}
-    .page{width:auto; min-height:0; padding:9mm 10mm; gap:9px}
-    .card{padding:14px 18px}
-    @page{size:A4; margin:0}
-  }
+.contact a,.education-meta a{color:#174f93;text-decoration:none}
+
+section{
+    margin-top:15px;
+}
+
+.section-title{
+    margin:0 0 8px;
+    padding-bottom:5px;
+    border-bottom:1px solid var(--line);
+    color:var(--navy);
+    font-size:9.2pt;
+    font-weight:800;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+}
+
+p{margin:0}
+
+.profile{
+    color:#303b4c;
+    font-size:9.5pt;
+    text-align:justify;
+}
+
+.entry{
+    margin-top:10px;
+    text-align:justify;
+}
+
+.entry:first-of-type{margin-top:0}
+
+.entry-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.title{
+    font-size:10pt;
+    font-weight:700;
+    color:#111827;
+}
+
+.date{
+    flex:none;
+    color:#536174;
+    font-size:8.4pt;
+    white-space:nowrap;
+}
+
+.context{
+    margin-top:2px;
+    color:#596579;
+    font-size:8.8pt;
+}
+
+ul{
+    margin:5px 0 0 17px;
+    padding:0;
+}
+
+li{
+    margin:2px 0;
+    padding-left:2px;
+    font-size:9pt;
+}
+
+strong{font-weight:700}
+
+.skills{
+    display:grid;
+    grid-template-columns:105px 1fr;
+    gap:5px 15px;
+    font-size:9pt;
+}
+
+.skill-name{
+    font-weight:700;
+    color:#334155;
+}
+
+.skill-list{color:#263346}
+
+.education + .education{
+    margin-top:8px;
+    padding-top:8px;
+    border-top:1px solid #edf0f3;
+}
+
+.education-title{
+    font-weight:700;
+    font-size:9.5pt;
+}
+
+.education-meta{
+    color:#596579;
+    font-size:8.7pt;
+}
+
+.languages{
+    color:#303b4c;
+    font-size:9pt;
+}
+
+
+@page{
+    size:A4;
+    margin:0;
+}
+
+@media print{
+    body{
+        background:#fff;
+        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact;
+    }
+
+    .page{
+        width:210mm;
+        min-height:297mm;
+        margin:0;
+        padding:10mm 12mm;
+    }
+
+    section,.entry{break-inside:avoid}
+}
+
+@media screen and (max-width:900px){
+    .page{
+        width:100%;
+        min-height:auto;
+        margin:0;
+        padding:25px;
+    }
+
+    .entry-head{
+        display:block;
+    }
+
+    .date{
+        display:block;
+        margin-top:2px;
+    }
+}
